@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cake4U</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <style>
+        body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+        }
+    
+        .navbar {
+          background-color: #EDE3DA;
+          padding: 15px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          box-shadow: 0 25px 32px -4px rgba(0, 0, 0, 0.1);
+        }
+    
+        .navbar-brand {
+          font-size: 1.5em;
+          font-weight: bold;
+        }
+    
+        .navbar-menu {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+        }
+    
+        .navbar-menu li {
+          margin-right: 20px;
+        }
+    
+        .navbar-menu a {
+          text-decoration: none;
+          color: #333;
+          font-weight: bold;
+          font-size: 1.2em;
+        }
+        .active {
+            background-color: #E2CEBC;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: white;
+        }
+        .container {
+          max-width: 1200px; /* Adjust the maximum width of the container as needed */
+          margin: 0 auto; /* Center the container */
+          overflow: hidden; /* Clear floats */
+        }
+
+        .column {
+          width: 50%;
+          float: left;
+          padding: 20px;
+          box-sizing: border-box;
+        }
+
+        /* Clearfix to handle float clearing */
+        .clearfix::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+    <div class="navbar-brand">CAKE4U</div>
+      <ul class="navbar-menu">
+        <li><a href="inicio.html">Início</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="personalizar.html">Personalizar</a></li>
+        <li><a href="encomendas.html">Encomendas</a></li>
+        <li><a href="contactos.html">Contactos</a></li>
+        <li><a href="notificacoes.html" class="active"><i class="fa fa-bell"></i></a></li>
+      </ul>
+    </div>
+    <div class="container clearfix">
+      <div class="column">
+        <!-- Content for the left column goes here -->
+        <h2>Left Column</h2>
+        <p>This is the left column content.</p>
+      </div>
+  
+      <div class="column">
+        <!-- Content for the right column goes here -->
+        <h2>Right Column</h2>
+        <p>This is the right column content.</p>
+      </div>
+    </div>
+</body>
+</html>
