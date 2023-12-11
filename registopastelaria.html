@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cake4U</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <style>
+      body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+      }
+  
+      .navbar {
+          background-color: #EDE3DA;
+          padding: 15px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          box-shadow: 0 25px 32px -4px rgba(0, 0, 0, 0.1);
+      }
+  
+      .navbar-brand {
+          font-size: 1.5em;
+          font-weight: bold;
+      }
+  
+      .navbar-menu {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+      }
+  
+      .navbar-menu li {
+          margin-right: 20px;
+      }
+  
+      .navbar-menu a {
+          text-decoration: none;
+          color: #333;
+          font-weight: bold;
+          font-size: 1.2em;
+      }
+      .active {
+          background-color: #E2CEBC;
+          padding: 5px 10px;
+          border-radius: 5px;
+          color: white;
+      }
+      .container {
+          max-width: 1200px; /* Adjust the maximum width of the container as needed */
+          margin: 0 auto; /* Center the container */
+          overflow: hidden; /* Clear floats */
+      }
+  
+      .column {
+          width: 50%;
+          float: left;
+          padding: 20px;
+          box-sizing: border-box;
+      }
+  
+      .clearfix::after {
+          content: "";
+          display: table;
+          clear: both;
+      }
+  
+      form {
+          display: flex;
+          flex-direction: column;
+      }
+  
+      label {
+          margin-bottom: 8px;
+      }
+  
+      input,
+      select, textarea {
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 45px;
+      }
+  
+      button {
+          padding: 10px;
+          background-color: #F4DFC8;
+          color: #000000;
+          border: none;
+          border-radius: 45px;
+          cursor: pointer;
+      }
+  
+      button:hover {
+          background-color: #E2CEBC;
+      }
+      .popup {
+        display: none;
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        max-width: 300px;
+        text-align: center;
+        z-index: 999;
+      }
+  
+      .popup h2 {
+        margin-bottom: 10px;
+      }
+  
+      .btn-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 15px;
+      }
+  
+      .accept-btn {
+        padding: 10px;
+        cursor: pointer;
+        background-color: #4fff90;
+      }
+  
+      .reject-btn {
+        padding: 10px;
+        cursor: pointer;
+        background-color: #ff6767;
+      }
+      </style>
+</head>
+<body style="background-color: #FAF6F0;">
+    <div class="navbar">
+        <div class="navbar-brand">CAKE4U</div>
+          <ul class="navbar-menu">
+            <li><a href="inicio.html">Início</a></li>
+            <li><a href="catalogo.html" class="active">Catálogo</a></li>
+            <li><a href="personalizar.html">Personalizar</a></li>
+            <li><a href="encomendas.html">Encomendas</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li><a href="notificacoes.html"><i class="fa fa-bell"></i></a></li>
+          </ul>
+        </div>
+        <div class="container clearfix">
+            <div class="row">
+                <div class="column col-4">
+                    <div class="row">
+                        <h2>Regista-te como pastelaria!</h2>
+                        <p>Se já tens conta faz login <a class="text-decoration-none" href="login.html" style="color:#000000"><strong>aqui</strong></a>!</p>
+                        <h1>TÁ DESFORMATADO AJUDEM PLS</h1>
+                    <div class="container">
+                        <form>
+                            <label>Nome do negócio</label>
+                            <input type="text" id="nome" name="nome" placeholder="Insira aqui o nome do seu negócio" required>
+                            <label>Número de telemóvel</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="Insira aqui o seu número de telefone" required>
+                            <label>Password</label>
+                            <input type="password" id="password" name="password" placeholder="Crie uma password" required>
+                            <label>Documentação do estabelecimento</label>
+                            <input type="file" id="doc_estabelecimento" name="doc_estabelecimento" placeholder="Anexe os documentos do estabelecimento" required>
+                            <button type="submit">Registar</button>
+                        </form>
+                      </div>
+                    </div>
+                </div>
+                <div class="column col-4">
+                    <br><br><br><br>
+                    <div class="container">
+                        <form>
+                            <label>Email</label>
+                            <input type="email" id="email" name="email" placeholder="Insira aqui o seu email" required>
+                            <label>Morada do estabelecimento</label>
+                            <input type="text" id="morada" name="morada" placeholder="Insira aqui o local onde serão preparados os bolos" required>
+                            <label>Repetir password</label>
+                            <input type="password" id="repeated_password" name="repeated_password" placeholder="Repita a password" required>
+                            <label>Documentação sanitário</label>
+                            <input type="file" id="doc_sanitaria" name="doc_sanitaria" placeholder="Anexe os documentos sanitários" required>
+                        </form>
+                    </div>
+                </div>
+                <div class="column col-4">
+                    <!-- Content for the right column goes here -->
+                    <img src="BoloRegisto.png" style="border-radius: 45px;">
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>
