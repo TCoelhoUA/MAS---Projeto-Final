@@ -81,7 +81,11 @@ function getRandomItem(array) {
         }, 5000); // 5000 milliseconds (5 seconds)
     } else {
         // User clicked "Cancel" or closed the dialog
-        alert("O pedido não foi rejeitado.");
+        var div = document.getElementById("pendente");
+        div.style.display = (div.style.display === "none") ? "block" : "none";
+        setTimeout(function() {
+            div.style.display = "none";
+        }, 5000); // 5000 milliseconds (5 seconds)
     }
 }
 

@@ -157,6 +157,9 @@
       <div class="alert alert-danger col-9" role="alert" style="text-align: center; display: none; position: absolute;" id="rejeitado">
         Pedido rejeitado com sucesso!
       </div>
+      <div class="alert alert-warning col-9" role="alert" style="text-align: center; display: none; position: absolute;" id="pendente">
+        Pedido enviado para <a class="text-decoration-none" href="listapedidos.html" style="color:#856404"><strong>Pedidos Pendentes</strong></a>!
+      </div>
       <div class="column">
         <!-- Content for the left column goes here -->
         <br><br><br>
@@ -208,8 +211,8 @@
       <p><strong>Formato:</strong> <span id="Formato"></span></p>
       <p><strong>Descrição:</strong> <span id="Descricao"></span></p>
       <div class="btn-container">
-        <button class="accept-btn" onclick="acceptOrder()">Aceitar</button>
-        <button class="reject-btn" onclick="rejectOrder()">Rejeitar</button>
+        <button class="accept-btn" style="border-radius: 15px;" onclick="acceptOrder()">Aceitar</button>
+        <button class="reject-btn" style="border-radius: 15px;" onclick="rejectOrder()">Rejeitar</button>
       </div>
     </div>
     
