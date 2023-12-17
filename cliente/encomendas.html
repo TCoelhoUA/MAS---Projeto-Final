@@ -141,13 +141,13 @@
 <body style="background-color: #FAF6F0;">
     <div class="navbar">
     <div class="navbar-brand">CAKE4U</div>
-      <ul class="navbar-menu">
+    <ul class="navbar-menu">
         <li><a href="inicio.html">Início</a></li>
         <li><a href="catalogo.html">Catálogo</a></li>
         <li><a href="personalizar.html">Personalizar</a></li>
-        <li><a href="encomendas.html" class="active">Encomendas</a></li>
-        <li><a href="contactos.html">Contactos</a></li>
-        <li><a href="notificacoes.html"><i class="fa fa-bell"></i></a></li>
+        <li><a href="encomendas.html">Encomendas</a></li>
+        <li><a href="contactos.html" class="active">Contactos</a></li>
+        <li><a href="#" onclick="togglenotis()"><i class="fa fa-bell"></i></a></li>
       </ul>
     </div>
     <h1 style="text-align: center; padding: 20px;"><strong><strong>Encomendas</strong></strong></h1>
@@ -185,7 +185,7 @@
         <div class="row">
             <img src="BoloCenoura.png" height="250px" style="border-radius: 45px;">
             <div class="column" style="justify-content: center; display: flex; flex-direction: column; align-items: flex-start;">
-                <h3><strong>ID do Pedido: 7578</strong></h3>
+                <h3><strong>ID do Pedido: 4056</strong></h3>
                 <h5><strong>Pastelaria: Confeitaria Rei D. Perpétuo</strong></h5>
                 <br>
                 <ul>
@@ -273,5 +273,38 @@
         </div>
         <hr>
     </div>
+    <div id="popup" class="popup">
+        <h2>Notificações</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-6"><img src="RedVelvet.png" height="50px"></div>
+                <div class="col-6"><p style="text-align: center; vertical-align:middle;">Em Preparo</p></div>
+            </div><hr>
+            <div class="row">
+                <div class="col-6"><img src="RedVelvet.png" height="50px"></div>
+                <div class="col-6"><p style="text-align: center; vertical-align:middle;">Aceite</p></div>
+            </div><hr>
+            <div class="row">
+                <div class="col-6"><img src="RedVelvet.png" height="50px"></div>
+                <div class="col-6"><p style="text-align: center; vertical-align:middle;">Aceite</p></div>
+            </div><hr>
+            <div class="row">
+                <div class="col-6"><img src="BoloCenoura.png" height="50px"></div>
+                <div class="col-6"><p style="text-align: center; vertical-align:middle;">Entregue</p></div>
+            </div><hr>
+            <div class="row">
+                <div class="col-6"><img src="BoloCenoura.png" height="50px"></div>
+                <div class="col-6"><p style="text-align: center; vertical-align:middle;">Em Distribuição</p></div>
+            </div><hr>
+            <div class="row">
+                <div class="col-6"><img src="BoloCenoura.png" height="50px"></div>
+                <div class="col-6"><p style="text-align: center; vertical-align:middle;">Finalizado</p></div>
+            </div><hr>
+            <div class="row" style="justify-content: center;">
+                <a href="encomendas.html">+ Ver mais</a>
+            </div>
+        </div>
+    </div>
+    <script src="notification.js"></script>
 </body>
 </html>

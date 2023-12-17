@@ -76,6 +76,24 @@
             display: table;
             clear: both;
         }
+
+        .popup {
+      display: none;
+      position: fixed;
+      top: 100px;
+      right: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      max-width: 300px;
+      text-align: center;
+      z-index: 999;
+    }
+
+    .popup h2 {
+      margin-bottom: 10px;
+    }
     </style>
 </head>
 <body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="pt" style="background-color: #FAF6F0;">
@@ -89,6 +107,38 @@
             <li><a href="contactos.html" class="active">Contactos</a></li>
             <li><a href="#" onclick="togglenotis()"><i class="fa fa-bell"></i></a></li>
         </ul>
+    </div>
+    <div id="popup" class="popup">
+        <h2>Notificações</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-6"><img src="RedVelvet.png" height="50px"></div>
+                <div class="col-6"><p style="text-align: center; vertical-align:middle;">Em Preparo</p></div>
+            </div><hr>
+            <div class="row">
+                <div class="col-6"><img src="RedVelvet.png" height="50px"></div>
+                <div class="col-6"><p style="text-align: center; vertical-align:middle;">Aceite</p></div>
+            </div><hr>
+            <div class="row">
+                <div class="col-6"><img src="RedVelvet.png" height="50px"></div>
+                <div class="col-6"><p style="text-align: center; vertical-align:middle;">Aceite</p></div>
+            </div><hr>
+            <div class="row">
+                <div class="col-6"><img src="BoloCenoura.png" height="50px"></div>
+                <div class="col-6"><p style="text-align: center; vertical-align:middle;">Entregue</p></div>
+            </div><hr>
+            <div class="row">
+                <div class="col-6"><img src="BoloCenoura.png" height="50px"></div>
+                <div class="col-6"><p style="text-align: center; vertical-align:middle;">Em Distribuição</p></div>
+            </div><hr>
+            <div class="row">
+                <div class="col-6"><img src="BoloCenoura.png" height="50px"></div>
+                <div class="col-6"><p style="text-align: center; vertical-align:middle;">Finalizado</p></div>
+            </div><hr>
+            <div class="row" style="justify-content: center;">
+                <a href="encomendas.html">+ Ver mais</a>
+            </div>
+        </div>
     </div>
     <section class="u-align-center-lg u-align-center-md u-align-center-xl u-align-left-sm u-align-left-xs u-clearfix u-custom-color-2 u-section-1" id="carousel_22e3">
         <div class="u-clearfix u-sheet u-sheet-1">
@@ -150,5 +200,6 @@
             </div>
         </div>
     </section>
+    <script src="notification.js"></script>
 </body>
 </html>

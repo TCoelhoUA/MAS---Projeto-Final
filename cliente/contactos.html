@@ -141,14 +141,14 @@
 <body style="background-color: #FAF6F0;">
     <div class="navbar">
     <div class="navbar-brand">CAKE4U</div>
-      <ul class="navbar-menu">
-        <li><a href="inicio.html">Início</a></li>
-        <li><a href="catalogo.html">Catálogo</a></li>
-        <li><a href="personalizar.html">Personalizar</a></li>
-        <li><a href="encomendas.html">Encomendas</a></li>
-        <li><a href="contactos.html" class="active">Contactos</a></li>
-        <li><a href="notificacoes.html"><i class="fa fa-bell"></i></a></li>
-      </ul>
+    <ul class="navbar-menu">
+      <li><a href="inicio.html">Início</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="personalizar.html">Personalizar</a></li>
+      <li><a href="encomendas.html">Encomendas</a></li>
+      <li><a href="contactos.html" class="active">Contactos</a></li>
+      <li><a href="#" onclick="togglenotis()"><i class="fa fa-bell"></i></a></li>
+    </ul>
     </div>
     <div class="container clearfix">
       <div class="alert alert-success col-9" role="alert" style="text-align: center; display:none; position: absolute;" id="aceite">
@@ -202,18 +202,69 @@
       </div>
     </div>
     <div id="popup" class="popup">
-      <h2>Pedido Pendente</h2>
-      <p><strong>Nome do Cliente:</strong> <span id="NomeCliente"></span></p>
-      <p><strong>Sabor do Bolo:</strong> <span id="SaborBolo"></span></p>
-      <p><strong>Recheio:</strong> <span id="Recheio"></span></p>
-      <p><strong>Cobertura:</strong> <span id="Cobertura"></span></p>
-      <p><strong>Peso:</strong> <span id="Peso"></span></p>
-      <p><strong>Formato:</strong> <span id="Formato"></span></p>
-      <p><strong>Descrição:</strong> <span id="Descricao"></span></p>
-      <div class="btn-container">
-        <button class="accept-btn" style="border-radius: 15px;" onclick="acceptOrder()">Aceitar</button>
-        <button class="reject-btn" style="border-radius: 15px;" onclick="rejectOrder()">Rejeitar</button>
+      <h2>Notificações</h2>
+      <div class="container">
+          <div class="row">
+              <div class="col-6"><img src="RedVelvet.png" height="50px"></div>
+              <div class="col-6"><p style="text-align: center; vertical-align:middle;">Em Preparo</p></div>
+          </div><hr>
+          <div class="row">
+              <div class="col-6"><img src="RedVelvet.png" height="50px"></div>
+              <div class="col-6"><p style="text-align: center; vertical-align:middle;">Aceite</p></div>
+          </div><hr>
+          <div class="row">
+              <div class="col-6"><img src="RedVelvet.png" height="50px"></div>
+              <div class="col-6"><p style="text-align: center; vertical-align:middle;">Aceite</p></div>
+          </div><hr>
+          <div class="row">
+              <div class="col-6"><img src="BoloCenoura.png" height="50px"></div>
+              <div class="col-6"><p style="text-align: center; vertical-align:middle;">Entregue</p></div>
+          </div><hr>
+          <div class="row">
+              <div class="col-6"><img src="BoloCenoura.png" height="50px"></div>
+              <div class="col-6"><p style="text-align: center; vertical-align:middle;">Em Distribuição</p></div>
+          </div><hr>
+          <div class="row">
+              <div class="col-6"><img src="BoloCenoura.png" height="50px"></div>
+              <div class="col-6"><p style="text-align: center; vertical-align:middle;">Finalizado</p></div>
+          </div><hr>
+          <div class="row" style="justify-content: center;">
+              <a href="encomendas.html">+ Ver mais</a>
+          </div>
       </div>
+  </div>
+  <div id="popup" class="popup">
+    <h2>Notificações</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-6"><img src="RedVelvet.png" height="50px"></div>
+            <div class="col-6"><p style="text-align: center; vertical-align:middle;">Em Preparo</p></div>
+        </div><hr>
+        <div class="row">
+            <div class="col-6"><img src="RedVelvet.png" height="50px"></div>
+            <div class="col-6"><p style="text-align: center; vertical-align:middle;">Aceite</p></div>
+        </div><hr>
+        <div class="row">
+            <div class="col-6"><img src="RedVelvet.png" height="50px"></div>
+            <div class="col-6"><p style="text-align: center; vertical-align:middle;">Aceite</p></div>
+        </div><hr>
+        <div class="row">
+            <div class="col-6"><img src="BoloCenoura.png" height="50px"></div>
+            <div class="col-6"><p style="text-align: center; vertical-align:middle;">Entregue</p></div>
+        </div><hr>
+        <div class="row">
+            <div class="col-6"><img src="BoloCenoura.png" height="50px"></div>
+            <div class="col-6"><p style="text-align: center; vertical-align:middle;">Em Distribuição</p></div>
+        </div><hr>
+        <div class="row">
+            <div class="col-6"><img src="BoloCenoura.png" height="50px"></div>
+            <div class="col-6"><p style="text-align: center; vertical-align:middle;">Finalizado</p></div>
+        </div><hr>
+        <div class="row" style="justify-content: center;">
+            <a href="encomendas.html">+ Ver mais</a>
+        </div>
     </div>
+</div>
+  <script src="notification.js"></script>
 </body>
 </html>
