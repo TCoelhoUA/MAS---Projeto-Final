@@ -27,13 +27,13 @@ function getRandomItem(array) {
                       "Boa tarde! Gostaria de encomendar um bolo para um evento de agradecimento. Pode ser algo clássico em tons de verde e castanho?",
                       ]
 
-    document.getElementById("NomeCliente").textContent = getRandomItem(NomeCliente);
-    document.getElementById("SaborBolo").textContent = getRandomItem(SaborBolo);
-    document.getElementById("Recheio").textContent = getRandomItem(Recheio);
-    document.getElementById("Cobertura").textContent = getRandomItem(Cobertura);
-    document.getElementById("Peso").textContent = getRandomItem(Peso);
-    document.getElementById("Formato").textContent = getRandomItem(Formato);
-    document.getElementById("Descricao").textContent = getRandomItem(Descricao);
+    document.getElementById("NomeCliente").textContent = getRandomItem(NomeCliente)
+    document.getElementById("SaborBolo").textContent = getRandomItem(SaborBolo)
+    document.getElementById("Recheio").textContent = getRandomItem(Recheio)
+    document.getElementById("Cobertura").textContent = getRandomItem(Cobertura)
+    document.getElementById("Peso").textContent = getRandomItem(Peso)
+    document.getElementById("Formato").textContent = getRandomItem(Formato)
+    document.getElementById("Descricao").textContent = getRandomItem(Descricao)
 
     /* document.getElementById("clientName").textContent = getRandomItem(clientNames);
     document.getElementById("cakeFlavor").textContent = getRandomItem(cakeFlavors);
@@ -53,17 +53,6 @@ function getRandomItem(array) {
     console.log("Order accepted");
     var div = document.getElementById("aceite");
     div.style.display = (div.style.display === "none") ? "block" : "none";
-
-    /* Constantes Random */
-    localStorage.setItem("nomeCliente", document.getElementById("NomeCliente").textContent);
-    localStorage.setItem("saborBolo", document.getElementById("SaborBolo").textContent);
-    localStorage.setItem("recheio", document.getElementById("Recheio").textContent);
-    localStorage.setItem("cobertura", document.getElementById("Cobertura").textContent);
-    localStorage.setItem("peso", document.getElementById("Peso").textContent);
-    localStorage.setItem("formato", document.getElementById("Formato").textContent);
-    localStorage.setItem("descricao", document.getElementById("Descricao").textContent);
-    localStorage.setItem("status", "1")
-
     setTimeout(function() {
       div.style.display = "none";
     }, 5000); // 5000 milliseconds (5 seconds)
@@ -87,7 +76,6 @@ function getRandomItem(array) {
         console.log("Order rejected");
         var div = document.getElementById("rejeitado");
         div.style.display = (div.style.display === "none") ? "block" : "none";
-
         setTimeout(function() {
             div.style.display = "none";
         }, 5000); // 5000 milliseconds (5 seconds)
@@ -105,4 +93,4 @@ function getRandomItem(array) {
   setInterval(function () {
     updatePopupContent();
     showPopup();
-  }, 5000);
+  }, 30000);
