@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cake4U</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #EDE3DA;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 25px 32px -4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .navbar-menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+            .navbar-menu li {
+                margin-right: 20px;
+            }
+
+            .navbar-menu a {
+                text-decoration: none;
+                color: #333;
+                font-weight: bold;
+                font-size: 1.2em;
+            }
+
+        .active {
+            background-color: #E2CEBC;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px; /* Adjust the maximum width of the container as needed */
+            margin: 0 auto; /* Center the container */
+            overflow: hidden; /* Clear floats */
+        }
+
+        .column {
+            width: 50%;
+            float: left;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input,
+        select, textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 45px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #F4DFC8;
+            color: #000000;
+            border: none;
+            border-radius: 45px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #E2CEBC;
+            }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 300px;
+            text-align: center;
+            z-index: 999;
+        }
+
+            .popup h2 {
+                margin-bottom: 10px;
+            }
+
+        .btn-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+        }
+
+        .accept-btn {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #4fff90;
+        }
+
+        .reject-btn {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #ff6767;
+        }
+    </style>
+</head>
+<body style="background-color: #FAF6F0;">
+    <div class="navbar">
+        <div class="navbar-brand">CAKE4U</div>
+        <ul class="navbar-menu">
+            <li><a href="inicio.html">Início</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="personalizar.html" class="active">Personalizar</a></li>
+            <li><a href="encomendas.html">Encomendas</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li><a href="notificacoes.html"><i class="fa fa-bell"></i></a></li>
+        </ul>
+    </div>
+    <br />
+    <h1 class="text-center">Personalização</h1>
+
+    <div class="container clearfix">
+        <div class="row">
+            <div class="column col-4">
+                <div class="row">
+                    <div class="container">
+                        <form>
+                            <br />
+                            <label>Massa</label>
+                            <select class="form-select" placeholder="Escolha a sua Massa" aria-label="Default select example" required>
+                                <option selected>Selecione uma massa</option>
+                                <option value="1">Brigadeiro</option>
+                                <option value="2">Folhada</option>
+                                <option value="3">Cenoura</option>
+                                <option value="4">Pão de Ló</option>
+                                <option value="5">Red Velvet</option>
+                                <option value="6">Outro</option>
+                            </select>
+                            <br /><br /><br />
+                            <label>Peso</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="Insira aqui o peso do bolo" required>
+                            <br /><br /><br />
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="column col-4">
+                <div class="container">
+                    <form>
+                        <br />
+                        <label>Recheio</label>
+                        <select class="form-select" placeholder="Escolha a sua Massa" aria-label="Default select example" required>
+                            <option selected>Selecione um recheio</option>
+                            <option value="1">Sem Recheio</option>
+                            <option value="2">Chocolate</option>
+                            <option value="3">Chantily</option>
+                            <option value="4">Doce de Ovo</option>
+                            <option value="5">Creme de Caramelo</option>
+                            <option value="6">Outro</option>
+                        </select>
+                        <br /><br /><br />
+                        <label>Formato</label>
+                        <select class="form-select" placeholder="Escolha a sua Massa" aria-label="Default select example" required>
+                            <option selected>Selecione um formato</option>
+                            <option value="1">Redondo</option>
+                            <option value="2">Quadrado</option>
+                            <option value="3">Retangular</option>
+                            <option value="4">3D</option>
+                            <option value="5">Número</option>
+                            <option value="6">Outro</option>
+                        </select>
+                        <br /><br /><br />
+                    </form>
+                </div>
+            </div>
+            <div class="column col-4">
+                <div class="container">
+                    <form>
+                        <br />  
+                        <label>Cobertura</label>
+                        <select class="form-select" placeholder="Escolha a sua Massa" aria-label="Default select example" required>
+                            <option selected>Selecione uma cobertura</option>
+                            <option value="1">Sem Cobertura</option>
+                            <option value="2">Chantily</option>
+                            <option value="3">Cream Cheese</option>
+                            <option value="4">Chocolate</option>
+                            <option value="5">Pasta de Açúcar</option>
+                            <option value="6">Outro</option>
+                        </select>
+                        <br /><br /><br />
+                        <label>Pastelaria</label>
+                        <select class="form-select" placeholder="Escolha a sua Massa" aria-label="Default select example" required>
+                            <option selected>Selecione uma pastelaria</option>
+                            <option value="1">Curso&ReCurso</option>
+                            <option value="2">Confeitaria Rei D.Perpétuo</option>
+                            <option value="3">Aquário do DETI</option>
+                            <option value="4">Cantina de Santiago - UA</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Outras Informaçãoes</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <button class="align-content-center" type="submit">Registar</button>
+        </div>
+    </div>
+
+</body>
+</html>
