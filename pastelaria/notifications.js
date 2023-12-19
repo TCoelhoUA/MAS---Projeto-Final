@@ -3,6 +3,16 @@ function getRandomItem(array) {
     return array[randomIndex];
   }
 
+  function showmessage() {
+    hidePopup();
+    console.log("Order accepted");
+    var div = document.getElementById("enviado");
+    div.style.display = (div.style.display === "none") ? "block" : "none";
+    setTimeout(function() {
+      div.style.display = "none";
+    }, 5000); // 5000 milliseconds (5 seconds)
+  }
+
   function updatePopupContent() {
     const NomeCliente = ["Tiago Coelho", "Margarida Ribeiro", "Rodrigo Costa", "Diogo Perpétuo", "Miguel Silva", "Sofia Oliveira",
     "João Pereira", "Ana Santos", "José Faria", "Beatriz Martins", "Rafael Costa", "Inês Rodrigues", "Tiago Almeida", "Mariana Cardoso"];
@@ -34,6 +44,7 @@ function getRandomItem(array) {
     document.getElementById("Peso").textContent = getRandomItem(Peso)
     document.getElementById("Formato").textContent = getRandomItem(Formato)
     document.getElementById("Descricao").textContent = getRandomItem(Descricao)
+
 
     /* document.getElementById("clientName").textContent = getRandomItem(clientNames);
     document.getElementById("cakeFlavor").textContent = getRandomItem(cakeFlavors);
@@ -105,4 +116,4 @@ function getRandomItem(array) {
   setInterval(function () {
     window.onload = updatePopupContent();
     showPopup();
-  }, 5000);
+  }, 30000);

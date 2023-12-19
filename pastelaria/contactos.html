@@ -150,6 +150,9 @@
       </ul>
     </div>
     <div class="container clearfix">
+      <div class="alert alert-success col-9" role="alert" style="text-align: center; display:none; position: absolute;" id="enviado">
+        Mensagem enviada com sucesso!
+      </div>
       <div class="alert alert-success col-9" role="alert" style="text-align: center; display:none; position: absolute;" id="aceite">
         Pedido aceite com sucesso!
       </div>
@@ -178,7 +181,7 @@
             </select>
 
             <textarea rows="4" cols="50" placeholder="Descreva aqui o seu problema" style="border-radius: 22.5px;"></textarea>
-            <button type="submit">Enviar</button>
+            <button onclick="showmessage()">Enviar</button>
           </form>
         </div>
         <div class="container clearfix">
