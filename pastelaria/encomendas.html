@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cake4U</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <style>
+      body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+      }
+  
+      .navbar {
+          background-color: #EDE3DA;
+          padding: 15px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          box-shadow: 0 25px 32px -4px rgba(0, 0, 0, 0.1);
+      }
+  
+      .navbar-brand {
+          font-size: 1.5em;
+          font-weight: bold;
+      }
+  
+      .navbar-menu {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+      }
+  
+      .navbar-menu li {
+          margin-right: 20px;
+      }
+  
+      .navbar-menu a {
+          text-decoration: none;
+          color: #333;
+          font-weight: bold;
+          font-size: 1.2em;
+      }
+      .active {
+          background-color: #E2CEBC;
+          padding: 5px 10px;
+          border-radius: 5px;
+          color: white;
+      }
+      .container {
+          max-width: 1200px; /* Adjust the maximum width of the container as needed */
+          margin: 0 auto; /* Center the container */
+          overflow: hidden; /* Clear floats */
+      }
+  
+      .column {
+          width: 50%;
+          float: left;
+          padding: 20px;
+          box-sizing: border-box;
+      }
+  
+      .clearfix::after {
+          content: "";
+          display: table;
+          clear: both;
+      }
+  
+      form {
+          display: flex;
+          flex-direction: column;
+      }
+  
+      label {
+          margin-bottom: 8px;
+      }
+  
+      input,
+      select, textarea {
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 45px;
+      }
+  
+      button {
+          padding: 10px;
+          background-color: #F4DFC8;
+          color: #000000;
+          border: none;
+          border-radius: 45px;
+          cursor: pointer;
+      }
+  
+      button:hover {
+          background-color: #E2CEBC;
+      }
+      .popup {
+        display: none;
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        max-width: 300px;
+        text-align: center;
+        z-index: 999;
+      }
+  
+      .popup h2 {
+        margin-bottom: 10px;
+      }
+  
+      .btn-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 15px;
+      }
+  
+      .accept-btn {
+        padding: 10px;
+        cursor: pointer;
+        background-color: #4fff90;
+      }
+  
+      .reject-btn {
+        padding: 10px;
+        cursor: pointer;
+        background-color: #ff6767;
+      }
+      </style>
+</head>
+<body style="background-color: #FAF6F0;">
+    <div class="navbar">
+    <div class="navbar-brand">CAKE4U</div>
+      <ul class="navbar-menu">
+        <li><a href="inicio.html">Início</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="encomendas.html" class="active">Encomendas</a></li>
+        <li><a href="contactos.html">Contactos</a></li>
+        <li><a href="perfil.html"><i class="fa fa-user"></i></a></li>
+      </ul>
+    </div>
+
+    <div class="container clearfix">
+      <div class="alert alert-success col-9" role="alert" style="text-align: center; display:none; position: absolute;" id="aceite">
+        Pedido aceite com sucesso!
+      </div>
+      <div class="alert alert-danger col-9" role="alert" style="text-align: center; display: none; position: absolute;" id="rejeitado">
+        Pedido rejeitado com sucesso!
+      </div>
+      <div class="alert alert-warning col-9" role="alert" style="text-align: center; display: none; position: absolute;" id="pendente">
+        Pedido enviado para <a class="text-decoration-none" href="listapedidos.html" style="color:#856404"><strong>Pedidos Pendentes</strong></a>!
+      </div>
+      <h1 style="text-align: center; padding: 20px; margin-top: 50px;"><strong><strong>Encomendas</strong></strong></h1>
+      <div class="row">
+        <img src="BoloTelaInicial.png" height="250px">
+         <div class="column" style="justify-content: center; display: flex; flex-direction: column; align-items: flex-start;">
+          <h6><strong>Nome do Cliente:<strong id = "NomeClienteText"> </strong></h6>
+          <h6><strong>Sabor do Bolo:<strong id = "SaborBoloText"></strong></h6>
+          <h6><strong>Recheio:<strong id = "RecheioText"></strong></h6>
+          <h6><strong>Cobertura:<strong id = "CoberturaText"></strong></h6>
+          <h6><strong>Peso:<strong id = "PesoText"></strong></h6>
+          <h6><strong>Formato:<strong id = "FormatoText"></strong></h6>
+          <h6><strong>Descrição:<strong id = "DescricaoText"></strong></h6>
+        </div>
+        <div class="column" style="width: 245px;">
+            <form>
+              <select id = "order_status"style="background-color: #FCBA7F; border-radius: 45px; text-align: center;">
+                <option disabled selected value = "1">Em Processo</option>
+                <option value = "2">Aceite</option>
+                <option value = "3">Em Preparo</option>
+                <option value = "4">Finalizado</option>
+              </select>
+            </form>
+          <br>
+          <button onclick="changestatus()" style="float: right; height: 50px; border-radius: 45px; font-size: 14px;"><strong>Atualizar Estado do Pedido</strong></button>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div id="popup" class="popup">
+      <h2>Pedido Pendente</h2>
+      <p><strong>Nome do Cliente:</strong> <span id="NomeCliente"></span></p>
+      <p><strong>Sabor do Bolo:</strong> <span id="SaborBolo"></span></p>
+      <p><strong>Recheio:</strong> <span id="Recheio"></span></p>
+      <p><strong>Cobertura:</strong> <span id="Cobertura"></span></p>
+      <p><strong>Peso:</strong> <span id="Peso"></span></p>
+      <p><strong>Formato:</strong> <span id="Formato"></span></p>
+      <p><strong>Descrição:</strong> <span id="Descricao"></span></p>
+      <div class="btn-container">
+        <button class="accept-btn" style="border-radius: 15px;" onclick="acceptOrder()">Aceitar</button>
+        <button class="reject-btn" style="border-radius: 15px;" onclick="rejectOrder()">Rejeitar</button>
+      </div>
+    </div>
+    <script>
+      /* Constantes Random */
+      const nomeCliente = localStorage.getItem("nomeCliente");
+      const saborBolo = localStorage.getItem("saborBolo");
+      const recheio = localStorage.getItem("recheio");
+      const cobertura = localStorage.getItem("cobertura");
+      const peso = localStorage.getItem("peso");
+      const formato = localStorage.getItem("formato");
+      const descricao = localStorage.getItem("descricao");
+
+      document.getElementById("NomeClienteText").innerHTML = " "+nomeCliente;
+      document.getElementById("SaborBoloText").innerHTML = " "+saborBolo;
+      document.getElementById("RecheioText").innerHTML = " "+recheio;
+      document.getElementById("CoberturaText").innerHTML = " "+cobertura;
+      document.getElementById("PesoText").innerHTML = " "+peso;
+      document.getElementById("FormatoText").innerHTML = " "+formato;
+      document.getElementById("DescricaoText").innerHTML = " "+descricao;
+    </script>
+    <script>
+      function changestatus() {
+        var select = document.getElementById("order_status");
+        var selectedOption = select.value;
+        console.log(selectedOption);
+    
+        if (selectedOption === "2") {
+          localStorage.setItem("status", "2");
+        }
+    
+        if (selectedOption === "3") {
+          localStorage.setItem("status", "3");
+        }
+    
+        if (selectedOption === "4") {
+          localStorage.setItem("status", "4");
+        }
+      } 
+
+      window.onload = function() {
+        var select = document.getElementById("order_status");
+        var status = localStorage.getItem("status");
+        if (status) {
+            select.value = status;
+        }
+      }
+    </script>
+</body>
+</html>

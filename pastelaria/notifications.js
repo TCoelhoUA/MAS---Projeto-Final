@@ -26,14 +26,14 @@ function getRandomItem(array) {
                       "Olá, estou a precisar de um bolo para um encontro de amigas. Algo simples, mas com um toque feminino, por favor.",
                       "Boa tarde! Gostaria de encomendar um bolo para um evento de agradecimento. Pode ser algo clássico em tons de verde e castanho?",
                       ]
-
-    document.getElementById("NomeCliente").textContent = getRandomItem(NomeCliente);
-    document.getElementById("SaborBolo").textContent = getRandomItem(SaborBolo);
-    document.getElementById("Recheio").textContent = getRandomItem(Recheio);
-    document.getElementById("Cobertura").textContent = getRandomItem(Cobertura);
-    document.getElementById("Peso").textContent = getRandomItem(Peso);
-    document.getElementById("Formato").textContent = getRandomItem(Formato);
-    document.getElementById("Descricao").textContent = getRandomItem(Descricao);
+    
+    document.getElementById("NomeCliente").textContent = getRandomItem(NomeCliente)
+    document.getElementById("SaborBolo").textContent = getRandomItem(SaborBolo)
+    document.getElementById("Recheio").textContent = getRandomItem(Recheio)
+    document.getElementById("Cobertura").textContent = getRandomItem(Cobertura)
+    document.getElementById("Peso").textContent = getRandomItem(Peso)
+    document.getElementById("Formato").textContent = getRandomItem(Formato)
+    document.getElementById("Descricao").textContent = getRandomItem(Descricao)
 
     /* document.getElementById("clientName").textContent = getRandomItem(clientNames);
     document.getElementById("cakeFlavor").textContent = getRandomItem(cakeFlavors);
@@ -103,6 +103,6 @@ function getRandomItem(array) {
 
   // Update and show the popup every 30 seconds
   setInterval(function () {
-    updatePopupContent();
+    window.onload = updatePopupContent();
     showPopup();
   }, 5000);
