@@ -116,4 +116,4 @@ function getRandomItem(array) {
   setInterval(function () {
     window.onload = updatePopupContent();
     showPopup();
-  }, 30000);
+  }, 10000);
